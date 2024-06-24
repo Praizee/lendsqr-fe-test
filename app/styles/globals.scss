@@ -7,6 +7,25 @@ $lendsqr-primary: #39cdcc;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-weight: 400;
+}
+
+a,
+Link,
+p,
+div,
+span {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
 }
 
 img {
@@ -27,6 +46,7 @@ img {
 
   a {
     color: $ant-menu-text !important;
+    font-size: 16px;
   }
 }
 
