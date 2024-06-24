@@ -1,0 +1,53 @@
+$ant-menu-text: #213f7d;
+$ant-menu-bg: #f0fcfc;
+$lendsqr-primary: #39cdcc;
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+  /* Disable right-clicking */
+  /* user-drag: none; */
+}
+
+/* Change the background color of the selected menu item */
+.ant-menu-item-selected {
+  background-color: $ant-menu-bg !important;
+  border-left: 5px solid $lendsqr-primary;
+}
+
+.ant-menu-item {
+  border-radius: 0 !important;
+
+  a {
+    color: $ant-menu-text !important;
+  }
+}
+
+/* Change the text color of the selected menu item */
+.ant-menu-item-selected {
+  a {
+    color: $ant-menu-text !important;
+    font-weight: 500;
+  }
+
+  /* Change the icon color of the selected menu item */
+  .ant-menu-item-icon {
+    color: $ant-menu-text !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Made with 💙 by Stephen Adeniji
+https://stephen-adeniji.vercel.app/ */
