@@ -1,0 +1,16 @@
+@import "./mixins";
+
+.container {
+  max-width: 1640px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  height: auto;
+  overflow-y: scroll;
+
+  @include desktop {
+    padding: 2rem 2rem;
+    min-height: 100vh;
+  }
+}
