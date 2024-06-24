@@ -1,0 +1,165 @@
+@import "./mixins";
+
+.nav_container {
+  @include mobile {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    height: 96px;
+    position: sticky;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding-top: 0.75rem; /* 12px */
+    padding-bottom: 0.75rem; /* 12px */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    // top: 0;
+    // z-index: 1000;
+    // background-color: white;
+  }
+
+  @include tablet {
+    padding-top: 1.25rem; /* 20px */
+    padding-bottom: 1.25rem; /* 20px */
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include desktop {
+    padding-top: 1.25rem; /* 20px */
+    padding-bottom: 1.25rem; /* 20px */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    // padding: 2rem 8rem;
+  }
+}
+
+.menu_button {
+  display: flex;
+
+  @include desktop {
+    display: none;
+  }
+
+  .menuIcon {
+    font-size: 25px;
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+  align-items: center;
+
+  @include tablet {
+    justify-content: space-between;
+  }
+  @include desktop {
+    justify-content: space-between;
+  }
+}
+
+.searchForm {
+  @include mobile {
+    display: none;
+  }
+
+  position: relative;
+  display: block;
+
+  input[type="text"] {
+    width: 400px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 14px;
+    color: #545f7d;
+    background-color: white;
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  button {
+    background-color: #39cdcc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    outline: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  .docsLink {
+    color: #213f7d;
+    text-decoration: underline;
+  }
+
+  .notificationsButton {
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 100%;
+    color: #718096;
+    border: none;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(95%);
+    }
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .profileButton {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    :active {
+      transform: scale(95%);
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+    }
+
+    .username {
+      color: #213f7d;
+      font-size: 16px;
+    }
+
+    .chevronIcon {
+      width: 24px;
+      height: 16px;
+    }
+  }
+}
