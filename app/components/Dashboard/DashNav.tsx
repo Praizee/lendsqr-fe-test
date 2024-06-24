@@ -10,6 +10,7 @@ import Image from "next/image";
 import Avatar from "@/public/assets/images/image 4.png";
 import { BiChevronDown } from "react-icons/bi";
 import styles from "@/app/styles/DashNav.module.scss";
+import { BsBell } from "react-icons/bs";
 
 const DashNav = () => {
   const messages = [
@@ -91,7 +92,8 @@ const DashNav = () => {
                 title="notifications"
                 className={styles.notificationsButton}
               >
-                <NotificationIcon className={styles.icon} />
+                <BsBell className={styles.icon} />
+                {/* <NotificationIcon className={styles.icon} /> */}
               </button>
             </Dropdown>
 

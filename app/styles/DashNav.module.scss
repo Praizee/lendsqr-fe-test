@@ -1,14 +1,14 @@
 @import "./mixins";
 
 .nav_container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  height: 96px;
+  position: sticky;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
   @include mobile {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    height: 96px;
-    position: sticky;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
     padding-top: 0.75rem; /* 12px */
     padding-bottom: 0.75rem; /* 12px */
     padding-left: 1rem;
@@ -81,11 +81,11 @@
     background-color: white;
 
     @include tablet {
-      width: 300px;
+      width: 200px;
     }
 
     @include mobile {
-      width: 100%;
+      width: 150px;
     }
   }
 
