@@ -7,7 +7,12 @@
 
 .mainContainer {
   display: grid;
-  min-height: 100vh;
+  // min-height: 100vh;
+  min-height: max-content;
+
+  @include tablet {
+    min-height: 90vh;
+  }
 
   @include desktop {
     min-height: 100vh;

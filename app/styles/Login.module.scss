@@ -21,7 +21,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 9999px;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
   background-color: white;
 }
 
@@ -127,6 +129,10 @@
   right: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
+
+  .show_hide {
+    font-size: 12px;
+  }
 }
 
 .link {
@@ -135,6 +141,7 @@
   font-weight: 600;
   color: #39cdcc;
   width: max-content;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;

@@ -18,7 +18,6 @@ const Login = () => {
       <div className={styles.loginContainer}>
         <div className={styles.relativeBlock}>
           <Link href="/" className={styles.homeLink}>
-            <span className="sr-only">Home</span>
             <Image src={Lendsqr} className={styles.homeImage} alt="Lendsqr" />
           </Link>
         </div>
@@ -45,7 +44,11 @@ const Login = () => {
                 className={styles.togglePasswordButton}
                 onClick={() => setPasswordHidden(!isPasswordHidden)}
               >
-                {isPasswordHidden ? <p>Show</p> : <p>Hide</p>}
+                {isPasswordHidden ? (
+                  <p className={styles.show_hide}>Show</p>
+                ) : (
+                  <p className={styles.show_hide}>Hide</p>
+                )}
               </button>
               <input
                 id="password"
