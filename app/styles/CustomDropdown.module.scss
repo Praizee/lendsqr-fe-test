@@ -1,0 +1,51 @@
+@import "_mixins.scss";
+
+.dropdown {
+  position: relative;
+  width: 100%;
+
+  &__button {
+    width: 100%;
+    background-color: white;
+    padding: 0.25rem 2rem;
+    color: #213f7d;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+
+  &__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.5rem;
+  }
+
+  &__arrow {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 1.5rem;
+  }
+
+  &__item {
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
