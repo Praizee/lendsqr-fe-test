@@ -1,0 +1,106 @@
+/* /styles/AuthLayout.module.scss */
+@import "./mixins";
+
+.section {
+  background-color: white;
+  height: 100vh;
+}
+
+.mainContainer {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.sectionInner {
+  position: relative;
+  display: flex;
+  height: 8rem;
+  background-color: #1a202c;
+  justify-content: center;
+  padding-top: 6rem;
+
+  @include tablet {
+    height: auto;
+    padding-top: 0;
+    justify-content: flex-start;
+  }
+
+  @include desktop {
+    grid-column: span 6 / span 6;
+    height: 100%;
+  }
+}
+
+.sectionBackground {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+
+  @include desktop {
+    opacity: 1;
+    border-right-width: 2px;
+    border-color: #fefefe;
+  }
+}
+
+.sectionContent {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    position: relative;
+    padding: 3rem;
+    flex-direction: column;
+    gap: 7rem;
+    height: max-content;
+    min-width: 600px;
+  }
+
+  @include desktop {
+    gap: 8rem;
+    padding: 0;
+  }
+}
+
+.linkWrapper {
+  width: max-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.signInImage {
+  width: 100%;
+  height: auto;
+
+  @include desktop {
+    width: 600px;
+    height: 337px;
+  }
+}
+
+.mainContent {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  @include tablet {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @include desktop {
+    grid-column: span 6 / span 6;
+    padding: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
