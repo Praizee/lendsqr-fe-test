@@ -1,5 +1,4 @@
 import Logo from "@/public/assets/images/logo.png";
-import Lendsqr from "@/public/assets/images/Lendsqr.png";
 import SignIn from "@/public/assets/svg/pablo-sign-in 1.svg";
 import Image from "next/image";
 import Link from "next/link";
