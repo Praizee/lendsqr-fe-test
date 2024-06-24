@@ -1,0 +1,23 @@
+@mixin mobile() {
+  /* Mobile */
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  /* Tablet and Smaller Desktop */
+  @media (min-width: 701px) and (max-width: 1120px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  /* Desktop */
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+/* Made with 💙 by Stephen Adeniji
+https://stephen-adeniji.vercel.app/ */
