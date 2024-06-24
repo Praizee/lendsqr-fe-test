@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
-import "./globals.css";
+import "./styles/globals.scss";
 
 const worksans = Work_Sans({
   weight: ["400", "700"],
