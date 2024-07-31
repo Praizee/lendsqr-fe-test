@@ -1,0 +1,67 @@
+@import "./mixins";
+
+.drawer {
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  max-width: 1640px;
+  position: relative;
+  display: grid;
+  grid-auto-columns: max-content auto;
+  width: 100%;
+}
+
+.drawer_open {
+  pointer-events: auto;
+  visibility: visible;
+  position: sticky;
+  display: block;
+  width: auto;
+  overscroll-behavior: auto;
+  overflow-y: auto;
+
+  > *:not(.drawer_overlay) {
+    transform: translateX(0%);
+  }
+
+  .drawer_overlay {
+    cursor: default;
+    background-color: transparent;
+  }
+}
+
+.drawer_side {
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+
+  > *:not(.drawer_overlay) {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .drawer_overlay {
+    display: none;
+  }
+}
+
+.drawer_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.drawer_content {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  min-width: 0px;
+}
+
+.children_container {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
